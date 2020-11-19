@@ -6,7 +6,7 @@
   "type": "module",
   "scripts": {
     "test": "c8 --check-coverage --include \"src\" --exclude \"src/.internal\" --exclude \"test\" mocha --all ",
-    "coverage": "c8 report --include \"src\" --exclude \"src/.internal\" --exclude \"test\" --reporter lcov --all"
+    "coverage": "c8 report --include \"src\" --exclude \"src/.internal\" --exclude \"test\" --reporter lcov --all && cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js"
   },
   "author": "",
   "license": "MIT",

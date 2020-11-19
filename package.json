@@ -11,6 +11,7 @@
   "author": "",
   "license": "MIT",
   "dependencies": {
+    "c8": "^7.3.5",
     "chai": "^4.2.0",
     "mocha": "^8.2.1"
   },

@@ -2,9 +2,8 @@ language: node_js
 node_js:
   - "stable"
 script:
-  - echo 'Build starts!!'
-  - echo 'Installing Deps!'
-  - yarn
-  - echo 'Testing!'
+  - echo 'Build starts'
+  - npm install
+  - echo 'Testing'
   - npm run test
 after_success: npm run coverage

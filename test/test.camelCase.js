@@ -25,7 +25,7 @@ describe('camelCase', () => {
             expect(camelCase(liikaaSanoja)).to.equal('fooBar')
         })
         it('syöte pelkkiä numeroita / 123 345', () => {
-            expect(camelCase('123 345')).to.equal('12345')
+            expect(camelCase('123 345')).to.equal('123345')
         })
         it('osa puuttuu / Foo ', () => {
             expect(camelCase('Foo')).to.equal('foo')

@@ -3,22 +3,29 @@ const expect = chai.expect
 
 import isEmpty from "../src/isEmpty.js";
 
+let tyhjaMap = new Map()
+let tyhjaSet = new Set()
+
+
 describe('isEmpty', () => {
     describe('isEmpty', () => {
-        it('isEmpty(null)', () => {
+        it('null', () => {
             expect(isEmpty(null)).to.equal(true)
         })
-        it('isEmpty(true)', () => {
-            expect(isEmpty(true)).to.equal(true)
+        it('tyhjä map', () => {
+            expect(isEmpty(tyhjaMap)).to.equal(true)
         })
-        it('isEmpty([1, 2, 3])', () => {
-            expect(isEmpty([1, 2, 3])).to.equal(false)
+        it('tyhjä set', () => {
+            expect(isEmpty(tyhjaSet)).to.equal(true)
         })
-        it('isEmpty(\'abc\')', () => {
-            expect(isEmpty('abc')).to.equal(false)
+        it('tyhjä taulukko', () => {
+            expect(isEmpty([])).to.equal(true)
         })
-        it('isEmpty({ \'a\': 1 })', () => {
-            expect(isEmpty({ 'a': 1 })).to.equal(false)
+        it('syöte numeroita', () => {
+            expect(isEmpty(123)).to.equal(false)
+        })
+        it('tyhjä', () => {
+            expect(isEmpty()).to.equal(true)
         })
     })
 })

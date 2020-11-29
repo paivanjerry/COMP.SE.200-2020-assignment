@@ -3,6 +3,9 @@ const expect = chai.expect
 
 import toNumber from "../src/toNumber.js";
 
+let symbol = Symbol('foo')
+let object = Object('foo')
+
 describe('toNumber', () => {
     describe('toNumber', () => {
         it('sallittu merkkijono / float', () => {
@@ -25,6 +28,12 @@ describe('toNumber', () => {
         })
         it('ei parametrejä', () => {
             expect(toNumber()).to.eql(NaN)
+        })
+        it('syöte on symbol tyyppiä', () => {
+            expect(toNumber(symbol)).to.eql(NaN)
+        })
+        it('syöte on object tyyppiä', () => {
+            expect(toNumber(object)).to.eql(NaN)
         })
     })
 })

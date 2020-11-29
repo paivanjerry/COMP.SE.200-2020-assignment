@@ -14,6 +14,9 @@ describe('endsWith', () => {
         it('positio on nolla', () => {
             expect(endsWith('abc', 'b',0)).to.eql(false)
         })
+        it('positio on negatiivinen', () => {
+            expect(endsWith('abc', 'b',-5)).to.eql(false)
+        })
         it('positio on > merkkijonon pituus', () => {
             expect(endsWith('abc', 'b',5)).to.eql(false)
         })

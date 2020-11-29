@@ -3,8 +3,8 @@ const expect = chai.expect
 
 import isBoolean from "../src/isBoolean.js";
 
-describe('isBoolean', () => {
-    describe('isBoolean', () => {
+describe('isBoolean.js', () => {
+    describe('isBoolean()', () => {
         it('input boolean true', () => {
             expect(isBoolean(true)).to.equal(true)
         })
@@ -23,5 +23,8 @@ describe('isBoolean', () => {
         it('input object', () => {
             expect(isBoolean({true: true})).to.equal(false)
         })
+        it('input empty', () => {
+          expect(isBoolean()).to.equal(false)
+      })
     })
 })

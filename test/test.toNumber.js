@@ -6,6 +6,9 @@ import toNumber from "../src/toNumber.js";
 let symbol = Symbol('foo')
 let object = Object('foo')
 
+function funktio() {
+}
+
 describe('toNumber', () => {
     describe('toNumber', () => {
         it('sallittu merkkijono / float', () => {
@@ -43,6 +46,9 @@ describe('toNumber', () => {
         })
         it('syöte on octa', () => {
             expect(toNumber(0o007)).to.eql(7)
+        })
+        it('syöte on funktio', () => {
+            expect(toNumber(funktio())).to.eql(NaN)
         })
     })
 })

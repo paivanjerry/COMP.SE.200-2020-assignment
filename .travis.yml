@@ -6,4 +6,5 @@ script:
   - npm install
   - echo 'Testing'
   - npm run test
-after_success: npm run coverage
+  - echo 'Running coverage'
+after_script: npm run coverage

@@ -35,5 +35,14 @@ describe('toNumber', () => {
         it('syöte on object tyyppiä', () => {
             expect(toNumber(object)).to.eql(NaN)
         })
+        it('syöte on binääri', () => {
+            expect(toNumber(0b0011)).to.eql(3)
+        })
+        it('syöte on hexa', () => {
+            expect(toNumber(0x00A)).to.eql(10)
+        })
+        it('syöte on octa', () => {
+            expect(toNumber(0o007)).to.eql(7)
+        })
     })
 })
